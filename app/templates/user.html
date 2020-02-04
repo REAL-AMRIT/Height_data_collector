@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% for post in posts1 %}
+<h1>{{ post.name_}} <h1>
+<h2>EMAIL:  {{ post.email_}} <br> HEIGHT:  {{ post.height_}}</h3>
+
+{% endfor %}
+<form action="{{url_for('search')}}" method="POST">
+  <input title="NAME" placeholder="Enter your Name" type="text" name="name1" required autofocus> <br>
+  <button type="submit"> Submit </button>
+</form>
+{% endblock %}
